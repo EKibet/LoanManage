@@ -60,7 +60,7 @@ def create_loan_step2(request):
         personal_det_form = PersonalParticularsForm()
 
     return render(request, 'index.html', locals())    
-
+@login_required
 def create_loan_step3(request):
     employment_det_form = EmploymentDetailsForm()
     user_address = Address.objects.get(user=request.user)
@@ -100,7 +100,7 @@ def create_loan_step4(request):
         bsn_det_form = BusinessTypeForm()
 
     return render(request, 'index.html', locals())  
-
+@login_required
 def create_loan_step5(request):
     bank_det_form = BankDetailsForm()
     user_address = Address.objects.get(user=request.user)
@@ -118,7 +118,8 @@ def create_loan_step5(request):
     else:
         bank_det_form = BankDetailsForm()
 
-    return render(request, 'index.html', locals())  
+    return render(request, 'index.html', locals()) 
+@login_required
 def create_loan_step6(request):
     loan_det_form = LoanParticularsForm()
     user_address = Address.objects.get(user=request.user)
@@ -137,7 +138,7 @@ def create_loan_step6(request):
         loan_det_form = LoanParticularsForm()
 
     return render(request, 'index.html', locals())  
-
+@login_required
 def create_loan_step7(request):
     other_det_form = OtherLoansForm()
     user_address = Address.objects.get(user=request.user)
