@@ -1,0 +1,1216 @@
+{% load static %}
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Material Bootstrap Wizard by Creative Tim</title>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!--     Fonts and icons     -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+  </head>
+
+  <body>
+    <div
+      class="image-container set-full-height"
+      style="background-image: url('http://demos.creative-tim.com/material-bootstrap-wizard/assets/img/wizard-book.jpg')"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <!-- Wizard container -->
+            <div class="wizard-container">
+              <div class="card wizard-card" data-color="red" id="wizard">
+                <!-- <form action="" method=""> -->
+                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+                <div class="wizard-header">
+                  <h3 class="wizard-title">Apply for loan today</h3>
+                </div>
+                <div class="wizard-navigation">
+                  <ul>
+                    <li>
+                      <a href="#address" data-toggle="tab">Address</a>
+					</li>
+					<li>
+							<a href="#personaldetails" data-toggle="tab">Personal Details</a>
+						  </li>
+                    <li>
+                      <a href="#employmentdetails" data-toggle="tab"
+                        >Employment Details</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#description" data-toggle="tab"
+                        >Type of Business</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#bankdetails" data-toggle="tab">Bank Details</a>
+					</li>
+					
+                    <li>
+                      <a href="#loandetails" data-toggle="tab"
+                        >Loan Particulars</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#otherloans" data-toggle="tab">Other Loans</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content">
+                  <div class="tab-pane" id="address">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h4 class="info-text">
+                          Let's start with your details.
+                        </h4>
+                      </div>
+                      <form action="{% url 'step_one' %}" method="POST">
+                        {% csrf_token%}
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">email</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Your Town</label>
+                              <input
+                                name="town"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">lock_outline</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Your Estate</label>
+                              <input
+                                name="estate"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">email</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label"
+                                >Your street_and_hse_no</label
+                              >
+                              <input
+                                name="street_and_hse_no"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">lock_outline</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label"
+                                >Your duration_in</label
+                              >
+                              <input
+                                name="duration_in"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">email</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <div class="form-group label-floating">
+                                <label class="control-label"
+                                  >Your rent_owned</label
+                                >
+                                <select name="rent_owned" class="form-control">
+                                  <option disabled="" selected=""></option>
+                                  <option value="Yes"> Yes </option>
+                                  <option value="No"> No </option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+						<div class="">
+								<input
+							type="submit"
+							class="btn btn-fill btn-success btn-wd"
+							value="Save"
+						  />
+							</div>                     
+						 </form>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="personaldetails">
+                    <form action="{% url 'step_two' %}" method="POST">
+                      {% csrf_token%}
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label"
+                              >Your membership_no</label
+                            >
+                            <input
+                              name="membership_no"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">first_name</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label">Your first_name</label>
+                            <input
+                              name="first_name"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label"
+                              >Your middle_name</label
+                            >
+                            <input
+                              name="middle_name"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label">Your last_name</label>
+                            <input
+                              name="last_name"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label">Your dob</label>
+                            <input
+                              name="dob"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label"
+                              >Your office_tel_no</label
+                            >
+                            <input
+                              name="office_tel_no"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label">Your email</label>
+                            <input
+                              name="email"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+						</div>
+						<div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your Address</label>
+								  <input
+									name="address"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label"
+                              >Your marital_status</label
+                            >
+                            <input
+                              name="marital_status"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label"
+                              >Your no_of_dependents</label
+                            >
+                            <input
+                              name="no_of_dependents"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+						</div>
+						<div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <div class="form-group label-floating">
+									<label class="control-label"
+									  >Your Address</label
+									>
+									<select
+									  name="physical_address"
+									  class="form-control"
+									>
+									  <option disabled="" selected=""></option>
+
+									  <option value="1"> {{user_address}} </option>
+									</select>
+								  </div>
+								</div>
+							  </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label">Your mobile Number</label>
+                            <input
+                              name="mobile_no"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label">Your pin number</label>
+                            <input
+                              name="pin_no"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                          <div class="form-group label-floating">
+                            <label class="control-label">Your ID number</label>
+                            <input
+                              name="id_no"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+						</div>
+						
+                      </div>
+                      <div class="col-sm-6 col-sm-offset-3">
+                        
+
+
+                      </div>
+					  <div class="">
+							<input
+						type="submit"
+						class="btn btn-fill btn-success btn-wd"
+						value="Save"
+					  />
+						</div>                    </form>
+                  </div>
+                <!-- </div> -->
+
+
+						<div class="tab-pane" id="employmentdetails">
+						  <div class="row">
+							<div class="col-sm-12">
+							  <h4 class="info-text">
+								Let's start with your details.
+							  </h4>
+							</div>
+							<form action="{% url 'step_three' %}" method="POST">
+							  {% csrf_token%}
+							  <div class="col-sm-6">
+								<div class="input-group">
+								  <span class="input-group-addon">
+									<i class="material-icons">email</i>
+								  </span>
+								  <div class="form-group label-floating">
+									<label class="control-label">Your employer</label>
+									<input
+									  name="applicants_employer"
+									  type="text"
+									  class="form-control"
+									/>
+								  </div>
+								</div>
+	  
+								<div class="input-group">
+								  <span class="input-group-addon">
+									<i class="material-icons">lock_outline</i>
+								  </span>
+								  <div class="form-group label-floating">
+									<label class="control-label">Your physical address</label>
+									<input
+									  name="physical_address"
+									  type="text"
+									  class="form-control"
+									/>
+								  </div>
+								</div>
+							  </div>
+							  <div class="col-sm-6">
+								<div class="input-group">
+								  <span class="input-group-addon">
+									<i class="material-icons">email</i>
+								  </span>
+								  <div class="form-group label-floating">
+									<label class="control-label"
+									  >Your postal_address</label
+									>
+									<input
+									  name="postal_address"
+									  type="text"
+									  class="form-control"
+									/>
+								  </div>
+								</div>
+	  
+								<div class="input-group">
+								  <span class="input-group-addon">
+									<i class="material-icons">lock_outline</i>
+								  </span>
+								  <div class="form-group label-floating">
+									<label class="control-label"
+									  >Your tel</label
+									>
+									<input
+									  name="tel"
+									  type="text"
+									  class="form-control"
+									/>
+								  </div>
+								</div>
+							  </div>
+							  <div class="col-sm-6">
+									<div class="input-group">
+									  <span class="input-group-addon">
+										<i class="material-icons">email</i>
+									  </span>
+									  <div class="form-group label-floating">
+										<label class="control-label">Your designation</label>
+										<input
+										  name="designation"
+										  type="text"
+										  class="form-control"
+										/>
+									  </div>
+									</div>
+		  
+									<div class="input-group">
+									  <span class="input-group-addon">
+										<i class="material-icons">lock_outline</i>
+									  </span>
+									  <div class="form-group label-floating">
+										<label class="control-label">Your Estate</label>
+										<input
+										  name="estate"
+										  type="text"
+										  class="form-control"
+										/>
+									  </div>
+									</div>
+								  </div>
+								  <div class="col-sm-6">
+									<div class="input-group">
+									  <span class="input-group-addon">
+										<i class="material-icons">email</i>
+									  </span>
+									  <div class="form-group label-floating">
+										<label class="control-label"
+										  >Your staff_no</label
+										>
+										<input
+										  name="staff_no"
+										  type="text"
+										  class="form-control"
+										/>
+									  </div>
+									</div>
+		  
+									<div class="input-group">
+									  <span class="input-group-addon">
+										<i class="material-icons">lock_outline</i>
+									  </span>
+									  <div class="form-group label-floating">
+										<label class="control-label"
+										  >Your employment_terms</label
+										>
+										<input
+										  name="employment_terms"
+										  type="text"
+										  class="form-control"
+										/>
+									  </div>
+									</div>
+								  </div>
+								  <div class="pull-right">
+										<input
+									type="submit"
+									class="btn btn-next btn-fill btn-success btn-wd"
+									name="next"
+									value="Save"
+								  />
+									</div>							
+								</form>
+						  </div>
+						</div>
+	  
+						<div class="tab-pane" id="personaldetails">
+						  <form action="{% url 'step_two' %}" method="POST">
+							{% csrf_token%}
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label"
+									>Your membership_no</label
+								  >
+								  <input
+									name="membership_no"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	  
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">first_name</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your first_name</label>
+								  <input
+									name="first_name"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							</div>
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label"
+									>Your middle_name</label
+								  >
+								  <input
+									name="middle_name"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	  
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your last_name</label>
+								  <input
+									name="last_name"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							</div>
+	  
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your dob</label>
+								  <input
+									name="dob"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	  
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label"
+									>Your office_tel_no</label
+								  >
+								  <input
+									name="office_tel_no"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							</div>
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your email</label>
+								  <input
+									name="email"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							  <div class="input-group">
+									  <span class="input-group-addon">
+										<i class="material-icons">lock_outline</i>
+									  </span>
+									  <div class="form-group label-floating">
+										<label class="control-label">Your Address</label>
+										<input
+										  name="address"
+										  type="text"
+										  class="form-control"
+										/>
+									  </div>
+									</div>
+							</div>
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label"
+									>Your marital_status</label
+								  >
+								  <input
+									name="marital_status"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	  
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label"
+									>Your no_of_dependents</label
+								  >
+								  <input
+									name="no_of_dependents"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							  <div class="input-group">
+									  <span class="input-group-addon">
+										<i class="material-icons">email</i>
+									  </span>
+									  <div class="form-group label-floating">
+										<div class="form-group label-floating">
+										  <label class="control-label"
+											>Your Address</label
+										  >
+										  <select
+											name="physical_address"
+											class="form-control"
+										  >
+											<option disabled="" selected=""></option>
+	  
+											<option value="1"> {{user_address}} </option>
+										  </select>
+										</div>
+									  </div>
+									</div>
+							</div>
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your mobile Number</label>
+								  <input
+									name="mobile_no"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	  
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your pin number</label>
+								  <input
+									name="pin_no"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your ID number</label>
+								  <input
+									name="id_no"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							  
+							</div>
+							<div class="col-sm-6 col-sm-offset-3">
+							  
+	  
+	  
+							</div>
+							<div class="">
+									<input
+								type="submit"
+								class="btn btn-fill btn-success btn-wd"
+								value="Save"
+							  />
+								</div>						  </form>
+						</div>
+
+                <div class="tab-pane" id="description">
+                  <div class="row">
+                    <!-- <h4 class="info-text">Drop us a small description.</h4> -->
+                    <form action="{% url 'step_four' %}" method="POST">
+							{% csrf_token%}
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your bussiness type</label>
+								  <input
+									name="bsn_type"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your businessincome</label>
+								  <input
+									name="business_income"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							</div>
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label"
+									>rental income</label
+								  >
+								  <input
+									name="rental_income"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label"
+									>other incomes</label
+								  >
+								  <input
+									name="other_incomes"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							</div>
+							<div class="col-sm-6">
+									<div class="input-group">
+											<span class="input-group-addon">
+											  <i class="material-icons">lock_outline</i>
+											</span>
+											<div class="form-group label-floating">
+											  <label class="control-label"
+												>Your years of operations</label
+											  >
+											  <input
+												name="years_of_operations"
+												type="text"
+												class="form-control"
+											  />
+											</div>
+										  </div>
+							</div>
+							<div class="">
+									<input
+								type="submit"
+								class="btn  btn-fill btn-success btn-wd"
+								value="Save"
+							  />
+								</div>						  </form>
+                </div>
+			  </div>
+			  <div class="tab-pane" id="bankdetails">
+					<div class="row">
+					  <div class="col-sm-12">
+						<h4 class="info-text">
+						  Let's start with your details.
+						</h4>
+					  </div>
+					  <form action="{% url 'step_five' %}" method="POST">
+						{% csrf_token%}
+						<div class="col-sm-6">
+						  <div class="input-group">
+							<span class="input-group-addon">
+							  <i class="material-icons">email</i>
+							</span>
+							<div class="form-group label-floating">
+							  <label class="control-label">Your account_name</label>
+							  <input
+								name="account_name"
+								type="text"
+								class="form-control"
+							  />
+							</div>
+						  </div>
+
+						  <div class="input-group">
+							<span class="input-group-addon">
+							  <i class="material-icons">lock_outline</i>
+							</span>
+							<div class="form-group label-floating">
+							  <label class="control-label">Your account number</label>
+							  <input
+								name="account_no"
+								type="text"
+								class="form-control"
+							  />
+							</div>
+						  </div>
+						</div>
+						<div class="col-sm-6">
+						  <div class="input-group">
+							<span class="input-group-addon">
+							  <i class="material-icons">email</i>
+							</span>
+							<div class="form-group label-floating">
+							  <label class="control-label"
+								>Your bank</label
+							  >
+							  <input
+								name="bank"
+								type="text"
+								class="form-control"
+							  />
+							</div>
+						  </div>
+
+						  <div class="input-group">
+							<span class="input-group-addon">
+							  <i class="material-icons">lock_outline</i>
+							</span>
+							<div class="form-group label-floating">
+							  <label class="control-label"
+								>Your tel</label
+							  >
+							  <input
+								name="branch"
+								type="text"
+								class="form-control"
+							  />
+							</div>
+						  </div>
+						</div>
+						<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your bank_code</label>
+								  <input
+									name="bank_code"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your branch_code</label>
+								  <input
+									name="branch_code"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+							</div>
+						
+							<div class="pull-right">
+									<input
+								type="submit"
+								class="btn  btn-fill btn-success btn-wd"
+								value="Save"
+							  />
+								</div>					  </form>
+					</div>
+				  </div>
+				  <div class="tab-pane" id="loandetails">
+						<div class="row">
+						  <div class="col-sm-12">
+						  </div>
+						  <form action="{% url 'step_six' %}" method="POST">
+							{% csrf_token%}
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your loan_type</label>
+								  <input
+									name="loan_type"
+									type="text"
+									class="form-control"
+									id="loanType"
+								  />
+								</div>
+							  </div>
+	
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">lock_outline</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label">Your purpose_of_loan</label>
+								  <input
+									name="purpose_of_loan"
+									type="text"
+									class="form-control"
+									id="purpose"
+								  />
+								</div>
+							  </div>
+							</div>
+							<div class="col-sm-6">
+							  <div class="input-group">
+								<span class="input-group-addon">
+								  <i class="material-icons">email</i>
+								</span>
+								<div class="form-group label-floating">
+								  <label class="control-label"
+									>Your amount</label
+								  >
+								  <input
+									name="amount"
+									id="amount"
+									type="text"
+									class="form-control"
+								  />
+								</div>
+							  </div>
+	
+
+							</div>
+							<div class="pull-right">
+									<input
+								type="submit"
+								class="btn btn-next btn-fill btn-success btn-wd"
+								name="next"
+								value="Save"
+								id="submit"
+							  />
+								</div>						  </form>
+								</div>
+							
+						</div>
+						<div class="tab-pane" id="otherloans">
+								<div class="row">
+								  <div class="col-sm-12">
+								  </div>
+								  <form action="{% url 'step_seven' %}" method="POST">
+									{% csrf_token%}
+									<div class="col-sm-6">
+									  <div class="input-group">
+										<span class="input-group-addon">
+										  <i class="material-icons">email</i>
+										</span>
+										<div class="form-group label-floating">
+										  <label class="control-label">Your loan_type</label>
+
+										  <input
+											name="bank_name"
+											type="text"
+											class="form-control"
+										  />
+										</div>
+									  </div>
+			
+									  <div class="input-group">
+										<span class="input-group-addon">
+										  <i class="material-icons">lock_outline</i>
+										</span>
+										<div class="form-group label-floating">
+										  <label class="control-label">Your amount_advanced</label>
+										  <input
+											name="amount_advanced"
+											type="text"
+											class="form-control"
+										  />
+										</div>
+									  </div>
+									</div>
+									<div class="col-sm-6">
+									  <div class="input-group">
+										<span class="input-group-addon">
+										  <i class="material-icons">email</i>
+										</span>
+										<div class="form-group label-floating">
+										  <label class="control-label"
+											>Your date_granted</label
+										  >
+										  <input
+											name="date_granted"
+											type="text"
+											class="form-control"
+										  />
+										</div>
+									  </div>
+									  <div class="input-group">
+											<span class="input-group-addon">
+											  <i class="material-icons">email</i>
+											</span>
+											<div class="form-group label-floating">
+											  <label class="control-label"
+												>Your reapyment_period</label
+											  >
+											  <input
+												name="reapyment_period"
+												type="text"
+												class="form-control"
+											  />
+											</div>
+										  </div>
+										  <div class="input-group">
+												<span class="input-group-addon">
+												  <i class="material-icons">email</i>
+												</span>
+												<div class="form-group label-floating">
+												  <label class="control-label"
+													>Your outstanding_balance</label
+												  >
+												  <input
+													name="outstanding_balance"
+													type="text"
+													class="form-control"
+												  />
+												</div>
+											  </div>
+			
+		
+									</div>
+									<div class="pull-right">
+										<input
+									type="submit"
+									class="btn btn-fill btn-success btn-wd"
+									value="Submit"
+								  />
+									</div>
+									
+								  </form>
+										</div>
+									
+								</div>
+					  </div>
+              <div class="wizard-footer">
+                <div class="pull-right">
+                  <input
+                    type="button"
+                    class="btn btn-next btn-fill btn-danger btn-wd"
+                    name="next"
+                    value="Next"
+                  />
+                  <!-- <input
+                    type="button"
+                    class="btn btn-finish btn-fill btn-danger btn-wd"
+                    name="finish"
+                    value="Finish"
+                  /> -->
+                </div>
+                <div class="pull-left">
+                  <input
+                    type="button"
+                    class="btn btn-previous btn-fill btn-default btn-wd"
+                    name="previous"
+                    value="Previous"
+                  />
+
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <!-- </form> -->
+            </div>
+          </div>
+          <!-- wizard container -->
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!--  big container -->
+
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+  </body>
+</html>
+bankdetails
