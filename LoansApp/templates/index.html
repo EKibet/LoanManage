@@ -87,16 +87,14 @@
                   <div class="tab-pane" id="address">
                     <div class="row">
                       <div class="col-sm-12">
-                        <h4 class="info-text">
-                          Let's start with your details.
-                        </h4>
+                        
                       </div>
                       <form action="{% url 'step_one' %}" method="POST">
                         {% csrf_token%}
                         <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
-                              <i class="material-icons">email</i>
+                              <i class="material-icons">location_on</i>
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label">Your Town</label>
@@ -110,7 +108,7 @@
 
                           <div class="input-group">
                             <span class="input-group-addon">
-                              <i class="material-icons">lock_outline</i>
+                              <i class="material-icons">home</i>
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label">Your Estate</label>
@@ -125,7 +123,7 @@
                         <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
-                              <i class="material-icons">email</i>
+                              <i class="material-icons">home</i>
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label"
@@ -141,11 +139,12 @@
 
                           <div class="input-group">
                             <span class="input-group-addon">
-                              <i class="material-icons">lock_outline</i>
+                              <i class="material-icons">text_fields
+															</i>
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label"
-                                >Your duration_in</label
+                                >Your duration in</label
                               >
                               <input
                                 name="duration_in"
@@ -158,12 +157,13 @@
                         <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
-                              <i class="material-icons">email</i>
+                              <i class="material-icons">text_fields
+															</i>
                             </span>
                             <div class="form-group label-floating">
                               <div class="form-group label-floating">
                                 <label class="control-label"
-                                  >Your rent_owned</label
+                                  >Rent owned</label
                                 >
                                 <select name="rent_owned" class="form-control">
                                   <option disabled="" selected=""></option>
@@ -191,7 +191,8 @@
                       <div class="col-sm-6">
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">email</i>
+                            <i class="material-icons">text_fields
+														</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label"
@@ -207,7 +208,8 @@
 
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">first_name</i>
+                            <i class="material-icons">text_fields
+														</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Your first_name</label>
@@ -222,7 +224,8 @@
                       <div class="col-sm-6">
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">email</i>
+                            <i class="material-icons">text_fields
+														</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label"
@@ -238,7 +241,8 @@
 
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">lock_outline</i>
+                            <i class="material-icons">text_fields
+														</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Your last_name</label>
@@ -254,7 +258,7 @@
                       <div class="col-sm-6">
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">email</i>
+                            <i class="material-icons">date</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Your dob</label>
@@ -268,11 +272,11 @@
 
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">lock_outline</i>
+                            <i class="material-icons">call</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label"
-                              >Your office_tel_no</label
+                              >Your office tel no</label
                             >
                             <input
                               name="office_tel_no"
@@ -298,7 +302,7 @@
 						</div>
 						<div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">lock_outline</i>
+								  <i class="material-icons">location_on</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label">Your Address</label>
@@ -313,7 +317,7 @@
                       <div class="col-sm-6">
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">email</i>
+                            <i class="material-icons">text</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label"
@@ -344,7 +348,7 @@
 						</div>
 						<div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">email</i>
+								  <i class="material-icons">location_on</i>
 								</span>
 								<div class="form-group label-floating">
 								  <div class="form-group label-floating">
@@ -366,7 +370,7 @@
                       <div class="col-sm-6">
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">email</i>
+                            <i class="material-icons">phone</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Your mobile Number</label>
@@ -393,7 +397,7 @@
                         </div>
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <i class="material-icons">lock_outline</i>
+                            <i class="material-icons">create</i>
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Your ID number</label>
@@ -425,16 +429,14 @@
 						<div class="tab-pane" id="employmentdetails">
 						  <div class="row">
 							<div class="col-sm-12">
-							  <h4 class="info-text">
-								Let's start with your details.
-							  </h4>
+							  
 							</div>
 							<form action="{% url 'step_three' %}" method="POST">
 							  {% csrf_token%}
 							  <div class="col-sm-6">
 								<div class="input-group">
 								  <span class="input-group-addon">
-									<i class="material-icons">email</i>
+									<i class="material-icons">create</i>
 								  </span>
 								  <div class="form-group label-floating">
 									<label class="control-label">Your employer</label>
@@ -448,7 +450,7 @@
 	  
 								<div class="input-group">
 								  <span class="input-group-addon">
-									<i class="material-icons">lock_outline</i>
+									<i class="material-icons">location_on</i>
 								  </span>
 								  <div class="form-group label-floating">
 									<label class="control-label">Your physical address</label>
@@ -463,7 +465,7 @@
 							  <div class="col-sm-6">
 								<div class="input-group">
 								  <span class="input-group-addon">
-									<i class="material-icons">email</i>
+									<i class="material-icons">location_on</i>
 								  </span>
 								  <div class="form-group label-floating">
 									<label class="control-label"
@@ -479,7 +481,7 @@
 	  
 								<div class="input-group">
 								  <span class="input-group-addon">
-									<i class="material-icons">lock_outline</i>
+									<i class="material-icons">phone</i>
 								  </span>
 								  <div class="form-group label-floating">
 									<label class="control-label"
@@ -496,7 +498,7 @@
 							  <div class="col-sm-6">
 									<div class="input-group">
 									  <span class="input-group-addon">
-										<i class="material-icons">email</i>
+										<i class="material-icons">location_on</i>
 									  </span>
 									  <div class="form-group label-floating">
 										<label class="control-label">Your designation</label>
@@ -510,7 +512,7 @@
 		  
 									<div class="input-group">
 									  <span class="input-group-addon">
-										<i class="material-icons">lock_outline</i>
+										<i class="material-icons">home</i>
 									  </span>
 									  <div class="form-group label-floating">
 										<label class="control-label">Your Estate</label>
@@ -525,7 +527,7 @@
 								  <div class="col-sm-6">
 									<div class="input-group">
 									  <span class="input-group-addon">
-										<i class="material-icons">email</i>
+										<i class="material-icons">create</i>
 									  </span>
 									  <div class="form-group label-floating">
 										<label class="control-label"
@@ -541,7 +543,7 @@
 		  
 									<div class="input-group">
 									  <span class="input-group-addon">
-										<i class="material-icons">lock_outline</i>
+										<i class="material-icons">create</i>
 									  </span>
 									  <div class="form-group label-floating">
 										<label class="control-label"
@@ -680,7 +682,7 @@
 							  </div>
 							  <div class="input-group">
 									  <span class="input-group-addon">
-										<i class="material-icons">lock_outline</i>
+										<i class="material-icons">location_on</i>
 									  </span>
 									  <div class="form-group label-floating">
 										<label class="control-label">Your Address</label>
@@ -695,7 +697,7 @@
 							<div class="col-sm-6">
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">email</i>
+								  <i class="material-icons">text</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label"
@@ -726,7 +728,7 @@
 							  </div>
 							  <div class="input-group">
 									  <span class="input-group-addon">
-										<i class="material-icons">email</i>
+										<i class="material-icons">location_on</i>
 									  </span>
 									  <div class="form-group label-floating">
 										<div class="form-group label-floating">
@@ -739,7 +741,7 @@
 										  >
 											<option disabled="" selected=""></option>
 	  
-											<option value="1"> {{user_address}} </option>
+											<option value="1"> Nairobi </option>
 										  </select>
 										</div>
 									  </div>
@@ -748,7 +750,7 @@
 							<div class="col-sm-6">
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">email</i>
+								  <i class="material-icons">phone</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label">Your mobile Number</label>
@@ -775,7 +777,7 @@
 							  </div>
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">lock_outline</i>
+								  <i class="material-icons">perm_phone_msg</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label">Your ID number</label>
@@ -810,7 +812,7 @@
 							<div class="col-sm-6">
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">email</i>
+								  <i class="material-icons">create</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label">Your bussiness type</label>
@@ -824,10 +826,10 @@
 	
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">lock_outline</i>
+								  <i class="material-icons">money</i>
 								</span>
 								<div class="form-group label-floating">
-								  <label class="control-label">Your businessincome</label>
+								  <label class="control-label">Your business income</label>
 								  <input
 									name="business_income"
 									type="text"
@@ -839,7 +841,7 @@
 							<div class="col-sm-6">
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">email</i>
+								  <i class="material-icons">money</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label"
@@ -855,7 +857,7 @@
 	
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">lock_outline</i>
+								  <i class="material-icons">money</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label"
@@ -872,7 +874,7 @@
 							<div class="col-sm-6">
 									<div class="input-group">
 											<span class="input-group-addon">
-											  <i class="material-icons">lock_outline</i>
+											  <i class="material-icons">time</i>
 											</span>
 											<div class="form-group label-floating">
 											  <label class="control-label"
@@ -898,16 +900,14 @@
 			  <div class="tab-pane" id="bankdetails">
 					<div class="row">
 					  <div class="col-sm-12">
-						<h4 class="info-text">
-						  Let's start with your details.
-						</h4>
+				
 					  </div>
 					  <form action="{% url 'step_five' %}" method="POST">
 						{% csrf_token%}
 						<div class="col-sm-6">
 						  <div class="input-group">
 							<span class="input-group-addon">
-							  <i class="material-icons">email</i>
+							  <i class="material-icons">create</i>
 							</span>
 							<div class="form-group label-floating">
 							  <label class="control-label">Your account_name</label>
@@ -921,7 +921,7 @@
 
 						  <div class="input-group">
 							<span class="input-group-addon">
-							  <i class="material-icons">lock_outline</i>
+							  <i class="material-icons">create</i>
 							</span>
 							<div class="form-group label-floating">
 							  <label class="control-label">Your account number</label>
@@ -936,7 +936,7 @@
 						<div class="col-sm-6">
 						  <div class="input-group">
 							<span class="input-group-addon">
-							  <i class="material-icons">email</i>
+							  <i class="material-icons">create</i>
 							</span>
 							<div class="form-group label-floating">
 							  <label class="control-label"
@@ -952,7 +952,7 @@
 
 						  <div class="input-group">
 							<span class="input-group-addon">
-							  <i class="material-icons">lock_outline</i>
+							  <i class="material-icons">phone</i>
 							</span>
 							<div class="form-group label-floating">
 							  <label class="control-label"
@@ -969,7 +969,7 @@
 						<div class="col-sm-6">
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">email</i>
+								  <i class="material-icons">create</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label">Your bank_code</label>
@@ -983,7 +983,7 @@
 	
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">lock_outline</i>
+								  <i class="material-icons">create</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label">Your branch_code</label>
@@ -1014,7 +1014,7 @@
 							<div class="col-sm-6">
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">email</i>
+								  <i class="material-icons">create</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label">Your loan_type</label>
@@ -1029,7 +1029,7 @@
 	
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">lock_outline</i>
+								  <i class="material-icons">create</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label">Your purpose_of_loan</label>
@@ -1045,7 +1045,7 @@
 							<div class="col-sm-6">
 							  <div class="input-group">
 								<span class="input-group-addon">
-								  <i class="material-icons">email</i>
+								  <i class="material-icons">money</i>
 								</span>
 								<div class="form-group label-floating">
 								  <label class="control-label"
@@ -1083,7 +1083,7 @@
 									<div class="col-sm-6">
 									  <div class="input-group">
 										<span class="input-group-addon">
-										  <i class="material-icons">email</i>
+										  <i class="material-icons">create</i>
 										</span>
 										<div class="form-group label-floating">
 										  <label class="control-label">Your loan_type</label>
@@ -1098,7 +1098,7 @@
 			
 									  <div class="input-group">
 										<span class="input-group-addon">
-										  <i class="material-icons">lock_outline</i>
+										  <i class="material-icons">money</i>
 										</span>
 										<div class="form-group label-floating">
 										  <label class="control-label">Your amount_advanced</label>
@@ -1113,7 +1113,7 @@
 									<div class="col-sm-6">
 									  <div class="input-group">
 										<span class="input-group-addon">
-										  <i class="material-icons">email</i>
+										  <i class="material-icons">date</i>
 										</span>
 										<div class="form-group label-floating">
 										  <label class="control-label"
@@ -1128,11 +1128,11 @@
 									  </div>
 									  <div class="input-group">
 											<span class="input-group-addon">
-											  <i class="material-icons">email</i>
+											  <i class="material-icons">date</i>
 											</span>
 											<div class="form-group label-floating">
 											  <label class="control-label"
-												>Your reapyment_period</label
+												>Your repayment_period</label
 											  >
 											  <input
 												name="reapyment_period"
@@ -1143,7 +1143,7 @@
 										  </div>
 										  <div class="input-group">
 												<span class="input-group-addon">
-												  <i class="material-icons">email</i>
+												  <i class="material-icons">money</i>
 												</span>
 												<div class="form-group label-floating">
 												  <label class="control-label"

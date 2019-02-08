@@ -52,7 +52,7 @@ DATABASES['default'].update(db_from_env)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Application definition
-
+# ALLOWED_HOSTS=[]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
